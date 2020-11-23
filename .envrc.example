@@ -1,0 +1,9 @@
+export PORT=3000
+
+# Your slack workspace URL
+export WORKSPACE_URL=
+
+# Get these from slack
+export BOT_OAUTH_ACCESS_TOKEN=
+export SLACK_SIGNING_SECRET=
+export BOT_USERNAME=

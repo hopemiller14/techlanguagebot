@@ -1,0 +1,8 @@
+.envrc
+.envrc.deploy
+node_modules
+yarn-error.log
+packer-build.log
+.DS_Store
+docker.env
+languagebot.tar.gz

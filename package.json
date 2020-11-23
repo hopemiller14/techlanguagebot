@@ -1,0 +1,23 @@
+{
+  "name": "languagebot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Hope Miller <hope.miller@macmillan.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "start-ngrok": "ngrok http 3000",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=12.13.0",
+    "yarn": ">=1.9.0"
+  },
+  "dependencies": {
+    "@slack/events-api": "^2.3.4",
+    "@slack/web-api": "^5.13.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "ngrok": "^3.3.0"
+  }
+}
