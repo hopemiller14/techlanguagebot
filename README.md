@@ -118,12 +118,15 @@ ex: bad words are "cat", "dog"
 
 
 ## TODO
-* filter out messages from all bot users?
+* filter out messages from all bot users? or maybe instead broadcast to entire channel since only the bot would see it
 * future idea: keep track of # of occurrences of each bad word
     * break down by bot users vs real users?
     * keep track in a DB
     * user type: [bot | real], ts, word
     * could create a new endpt for querying
+* future idea: make words configurable by channel
+    * maybe make slack bot interactable?
+* how to handle "resources" and "worker"? impossible to distinguish between person vs machine
 
 
 ## Resources
