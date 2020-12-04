@@ -5,9 +5,10 @@
   "author": "Hope Miller <hope.miller@macmillan.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "start-ngrok": "ngrok http 3000",
-    "test": "mocha"
+    "start": "source .envrc && node src/app.js",
+    "start-ngrok": "source .envrc && ngrok http 3000",
+    "test": "mocha",
+    "verify": "source .envrc && ./node_modules/.bin/slack-verify --secret $SLACK_SIGNING_SECRET"
   },
   "engines": {
     "node": ">=12.13.0",

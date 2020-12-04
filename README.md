@@ -19,12 +19,12 @@ Slack bot user who automatically responds with an ephemeral message whenever you
 1. Create a username for your bot in Slack, and paste it into into .envrc.
 1. terminal window 1:
     1. ``` yarn ```
-    1. ``` source .envrc ```
     1. ``` yarn start-ngrok ```
+    1. Copy the https Forwarding URL from the ngrok output; e.g. https://98fbc0c341db.ngrok.io
+    1. In Slack go to your bot's Event Subscriptions page. In Request URL paste in the ngrok URL + /slack/events.
 1. terminal window 2:
-    1. ```source .envrc```
-    1. ```./node_modules/.bin/slack-verify --secret $SLACK_SIGNING_SECRET```
-    1. Check the Event Subscriptions page in Slack and wait until your app is successfully verified.
+    1. ``` yarn verify ```
+    1. On the Event Subscriptions page in Slack and wait until your app is successfully verified (you might have to click Retry).
     1. On the Event Subscriptions page, Subscribe to the following Bot Events:
             * message.channels
             * message.groups
@@ -34,14 +34,16 @@ Slack bot user who automatically responds with an ephemeral message whenever you
 
 ### Every time
 1. terminal window 1:
-    1. ```source .envrc```
-    1. ```yarn start```
+    1. ``` yarn start ```
 1. in terminal window 2:
-    1. ``` source .envrc```
-    1. ```yarn start-ngrok```
+    1. ``` yarn start-ngrok ```
     1. Copy the https Forwarding URL from the ngrok output; e.g. https://98fbc0c341db.ngrok.io
     1. In Slack go to your bot's Event Subscriptions page. In Request URL paste in the ngrok URL + /slack/events.
     1. Wait until your app is successfully verified, then click Save Changes.
+
+
+## Run the tests
+``` yarn test ```
 
 
 ## Questions

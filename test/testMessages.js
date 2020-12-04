@@ -1,7 +1,7 @@
 const assert = require('assert');
 const msgData = require('./messageData');
 
-const { getBadWords, constructResponse } = require('../helpers');
+const { getBadWords, constructResponse } = require('../src/helpers');
 
 
 function iterateOverTestCases (testCasesObject) {
