@@ -19,7 +19,6 @@ app.set('workspace_url', process.env.WORKSPACE_URL);
 app.set('bot_oauth_token', process.env.BOT_OAUTH_ACCESS_TOKEN);
 app.set('bot_username', process.env.BOT_USERNAME);
 
-
 const callUsersList = (nextCursor = null) => {
     return new Promise(resolve => {
         resolve(web.users.list({
@@ -61,6 +60,10 @@ const sendMessage = async (channel, user, threadTs, text) => {
         console.log('Error sending message!', err);
     }
 }
+
+app.get('/', function(req, res){
+  res.send('Language Bot');
+});
 
 app.listen(app.get('port'), () => {
     console.log(`Bot is listening on port ${app.get('port')}`);
