@@ -1,0 +1,16 @@
+[Unit]
+Description=languagebot
+
+[Service]
+EnvironmentFile=/mnt/myVol/languagebot/.envrc
+ExecStart=/bin/sh -c 'cd /mnt/myVol/languagebot && yarn start'
+Restart=on-failure
+User=nobody
+Group=nogroup
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=languagebot
+
+[Install]
+WantedBy=multi-user.target
+Alias=languagebot.service
