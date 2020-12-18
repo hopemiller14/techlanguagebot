@@ -27,7 +27,4 @@ describe('Bad Words Caught', function () {
     describe('Messages', function () {
         iterateOverTestCases(msgData.messages);
     });
-    describe('Real Messages', function () {
-        iterateOverTestCases(msgData.realMessages);
-    });
 });

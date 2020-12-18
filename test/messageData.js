@@ -398,39 +398,3 @@ exports.messages = [
         "badWordsUsed": [ "slave node" ], // note that slave gets excluded here
     },
 ];
-
-exports.realMessages = [
-    {
-        "userMsg":
-                "so every so often, somebody runs slapi tests against production… maybe they have an improperly sourced .envrc file or something but" +
-                "it’s really annoying because one of the tests also tests generating various errors from pythag" +
-                "https://bitbucket.org/mnv_tech/assess/src/master/slapi/test/Homework/PythagTest.js" +
-                "https://bitbucket.org/mnv_tech/assess/src/master/slapi/misc/AuthorItem/PythagPayloads.js",
-        "badWordsUsed": [ "master" ],
-    },
-    {
-        "userMsg": "FYI I just pulled master into our integration branch",
-        "badWordsUsed": [ "master" ],
-    },
-    {
-        "userMsg":
-                "awesome! OK so since that’s a bug ticket that means that PO acceptance will happen on int. so in order to get it onto int, we’ll need to merge it into master.  here are the steps to do that:" +
-                "merge master into the branch. If there are no conflicts then you can just do this right in BB by going to the",
-        "badWordsUsed": [ "master" ],
-    },
-    {
-        "userMsg":
-                "mysql> show slave status \G" +
-                "*************************** 1. row ***************************" +
-                "Slave_IO_State: Waiting for master to send event" +
-                "Master_Host: 000.00.0.000" +
-                "...Relay_Log_Pos: 11080" +
-                "Relay_Master_Log_File: test-mysql-bin.000001" +
-                "Slave_IO_Running: Yes\"",
-        "badWordsUsed": [ "master",  "slave" ],
-    },
-    {
-        "userMsg": "Rebuilding [ njs_mth1604 ] with 'master' branch and properties file 'dotme'. http://jenkins.mldev.cloud/job/DotMe/job/SLAPI_ASSEMBLE/10156/console",
-        "badWordsUsed": [ "master branch" ],
-    },
-];
