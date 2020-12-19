@@ -30,6 +30,11 @@ Slack bot user who automatically responds with an ephemeral message whenever you
             * message.groups
     1. Click Save Changes at the bottom of the page.
     1. Once your app is successfully verified, you can kill the process in window 2.
+1. Create a new slash command for your app in Slack (see [here](https://api.slack.com/interactivity/slash-commands)) with the following settings:
+    * Command: /getbadwordlist
+    * Request URL: ngrok URL + /slack/getbadwordlist
+    * Description: Gets the list of bad words that Tech Language Bot currently knows
+    1. You might need to reinstall the app to your workspace again after this step.
 
 
 ### Every time
