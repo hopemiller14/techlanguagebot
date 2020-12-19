@@ -1,3 +1,7 @@
+exports.last_updated = "2020-12-05"; // update this string every time you revise the word list
+
+exports.who_to_contact = "the *DEI Team*";
+
 exports.word_dict = {
     "blacklist": ["deny list"],
     "dummy value": ["placeholder", "sample value"],

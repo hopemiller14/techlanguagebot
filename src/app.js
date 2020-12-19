@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const { createEventAdapter } = require('@slack/events-api')
 const { WebClient } = require('@slack/web-api')
 
-const { getBadWords, constructResponse } = require('./helpers.js');
+const { getBadWordsUsed, constructResponseMessage, getBadWordList } = require('./helpers.js');
 
 const app = express();
 const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
@@ -61,8 +61,12 @@ const sendMessage = async (channel, user, threadTs, text) => {
     }
 }
 
-app.get('/', function(req, res){
-  res.send('Language Bot');
+app.get('/', function (req, res) {
+  res.send('Tech Language Bot');
+});
+
+app.post('/slack/getbadwordlist', function (req, res) {
+    res.send(getBadWordList());
 });
 
 app.listen(app.get('port'), () => {
@@ -84,14 +88,15 @@ slackEvents.on('message', (event) => {
             user = event.message.user;
             threadTs = event.message.thread_ts || null;
         }
+
     } catch (err) {
         console.log('Error receiving message!', err);
     }
     if (event.subtype !== 'message_deleted' && user !== botUserId && text !== undefined) {
-        const badWordsUsed = getBadWords(text);
+        const badWordsUsed = getBadWordsUsed(text);
         if (badWordsUsed.length > 0) {
             badWordsUsed.forEach(w => {
-                const msgTxt = constructResponse(w);
+                const msgTxt = constructResponseMessage(w);
                 sendMessage(channel, user, threadTs, msgTxt);
             });
         }
