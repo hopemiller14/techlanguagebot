@@ -27,7 +27,7 @@ const constructResponseMessage = (bad) => {
 const getBadWordList = () => {
     const updatedString = new Date(strings.last_updated).toDateString();
     const response =
-        `Here are the words that I know right now (_last updated ${updatedString}_):\n
+        `Here are the words that I know right now (_list last updated ${updatedString}_):\n
         ${Object.keys(WORD_DICT).join(', ')}\n
     If you have other suggestions, please reach out to ${strings.who_to_contact}!`;
     return response;
