@@ -1,4 +1,4 @@
-# Language Bot
+# Tech Language Bot
 Slack bot user who automatically responds with an ephemeral message whenever you use one of the 'bad words' and suggests another word to use instead
 
 
@@ -136,6 +136,7 @@ https://lifehacker.com/ditch-these-racist-terms-from-your-tech-vocabulary-184404
 https://open.nytimes.com/finding-the-right-words-491b93b8b668
 https://api.slack.com/authentication/basics#start
 https://api.slack.com/events-api
+https://api.slack.com/events
 https://slack.dev/node-slack-sdk/getting-started
 https://slack.dev/node-slack-sdk/tutorials/local-development
 https://api.slack.com/scopes

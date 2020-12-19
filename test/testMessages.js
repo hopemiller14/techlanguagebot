@@ -1,17 +1,17 @@
 const assert = require('assert');
 const msgData = require('./messageData');
 
-const { getBadWords, constructResponse } = require('../src/helpers');
+const { getBadWordsUsed, constructResponseMessage } = require('../src/helpers');
 
 
 function iterateOverTestCases (testCasesObject) {
     testCasesObject.forEach(function (test) {
         it(`User message: ${test.userMsg}`, function (done) {
-            const badWordsUsed = getBadWords(test.userMsg);
+            const badWordsUsed = getBadWordsUsed(test.userMsg);
             assert.deepStrictEqual(badWordsUsed, test.badWordsUsed);
             if (test.responses) {
                 badWordsUsed.forEach(function (word, index) {
-                    const responseMsg = constructResponse(word);
+                    const responseMsg = constructResponseMessage(word);
                     assert.strictEqual(responseMsg, test.responses[index]);
                 });
             }
