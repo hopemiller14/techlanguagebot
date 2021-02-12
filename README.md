@@ -136,6 +136,7 @@ ex: bad words are "cat", "dog"
 * future idea: make words configurable by channel?
     * maybe make slack bot interactable?
 * how to handle "resources" and "worker"? impossible to distinguish between person vs machine
+* make /getbadwordlist work in threads
 
 
 ## Resources
