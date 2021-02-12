@@ -139,11 +139,11 @@ ex: bad words are "cat", "dog"
 
 
 ## Resources
-https://lifehacker.com/ditch-these-racist-terms-from-your-tech-vocabulary-1844041452
-https://open.nytimes.com/finding-the-right-words-491b93b8b668
-https://api.slack.com/authentication/basics#start
-https://api.slack.com/events-api
-https://api.slack.com/events
-https://slack.dev/node-slack-sdk/getting-started
-https://slack.dev/node-slack-sdk/tutorials/local-development
-https://api.slack.com/scopes
+* https://lifehacker.com/ditch-these-racist-terms-from-your-tech-vocabulary-1844041452
+* https://open.nytimes.com/finding-the-right-words-491b93b8b668
+* https://api.slack.com/authentication/basics#start
+* https://api.slack.com/events-api
+* https://api.slack.com/events
+* https://slack.dev/node-slack-sdk/getting-started
+* https://slack.dev/node-slack-sdk/tutorials/local-development
+* https://api.slack.com/scopes
